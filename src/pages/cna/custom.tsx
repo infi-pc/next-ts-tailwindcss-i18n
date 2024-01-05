@@ -9,7 +9,7 @@ import { FC } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 const CardItem: FC<{ title?: string; subtitle?: string; href: string }> = (
-  props,
+  props
 ) => {
   const { title, subtitle, children, href } = props;
 
@@ -39,13 +39,13 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 const CustomCNA: NextPage = () => {
-  const { t } = useTranslation([PAGES_TNS], { keyPrefix: "cna.custom" });
+  const { t } = useTranslation([PAGES_TNS], {});
 
   return (
     <>
       <Head>
-        <title>{t("documentTitle")}</title>
-        <meta name="description" content={t("documentDesc")} />
+        <title>{t("cna.custom.documentTitle")}</title>
+        <meta name="description" content={t("cna.custom.documentDesc")} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -53,7 +53,7 @@ const CustomCNA: NextPage = () => {
       <div className="flex flex-col min-h-screen text-center">
         <main className="flex flex-col items-center justify-center flex-grow">
           <h1 className="mb-2 text-6xl">
-            <Trans t={t} i18nKey="pageTitle">
+            <Trans t={t} i18nKey="cna.custom.pageTitle">
               {"Welcome to "}
               <a href="https://nextjs.org" className="link">
                 Next.js
@@ -62,7 +62,7 @@ const CustomCNA: NextPage = () => {
             </Trans>
           </h1>
           <p className="text-2xl">
-            <Trans t={t} i18nKey="pageSubtitle">
+            <Trans t={t} i18nKey="cna.custom.pageSubtitle">
               {"Get started by editing "}
               <code className="px-2 py-1 text-xl rounded-md bg-background-100 dark:bg-background-800">
                 pages/index.tsx
@@ -86,23 +86,29 @@ const CustomCNA: NextPage = () => {
             </Trans>
           </p>
           <div className="grid mt-4 lg:grid-cols-2">
-            <CardItem title={t("docsTitle")} href="https://nextjs.org/docs">
-              {t("docsDesc")}
-            </CardItem>
-            <CardItem title={t("learnTitle")} href="https://nextjs.org/learn">
-              {t("learnDesc")}
+            <CardItem
+              title={t("cna.custom.docsTitle")}
+              href="https://nextjs.org/docs"
+            >
+              {t("cna.custom.docsDesc")}
             </CardItem>
             <CardItem
-              title={t("examplesTitle")}
+              title={t("cna.custom.learnTitle")}
+              href="https://nextjs.org/learn"
+            >
+              {t("cna.custom.learnDesc")}
+            </CardItem>
+            <CardItem
+              title={t("cna.custom.examplesTitle")}
               href="https://github.com/vercel/next.js/tree/master/examples"
             >
-              {t("examplesDesc")}
+              {t("cna.custom.examplesDesc")}
             </CardItem>
             <CardItem
-              title={t("deployTitle")}
+              title={t("cna.custom.deployTitle")}
               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             >
-              {t("deployDesc")}
+              {t("cna.custom.deployDesc")}
             </CardItem>
           </div>
         </main>

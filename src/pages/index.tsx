@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 };
 
 const Homepage: NextPage = () => {
-  const { t } = useTranslation([PAGES_TNS], { keyPrefix: "index" });
+  const { t } = useTranslation([PAGES_TNS], {});
   const { t: gt } = useTranslation([GLOSSARY_TNS]);
 
   return (
@@ -48,7 +48,7 @@ const Homepage: NextPage = () => {
         <h1 className="mb-1 text-5xl font-semibold capitalize cursor-default select-none sm:text-6xl">
           <Trans
             t={t}
-            i18nKey="pageTitle"
+            i18nKey="index.pageTitle"
             values={{ name: "E. Berke Karagöz" }}
             components={{
               1: (
@@ -73,7 +73,7 @@ const Homepage: NextPage = () => {
         <p className="max-w-sm text-xl font-medium select-none">
           <Trans
             t={t}
-            i18nKey="pageSubtitle"
+            i18nKey="index.pageSubtitle"
             components={{ 1: <a href="https://berkekaragoz.com" /> }}
           />
         </p>
@@ -81,16 +81,16 @@ const Homepage: NextPage = () => {
           <dt>
             <a href="https://nextjs.org/">Next.js</a>
           </dt>
-          <dd>{t("nextjsDesc")}</dd>
+          <dd>{t("index.nextjsDesc")}</dd>
           <dt>
             <a href="https://www.typescriptlang.org/">TypeScript</a>
           </dt>
-          <dd>{t("tsDesc")}</dd>
+          <dd>{t("index.tsDesc")}</dd>
           <dt>
             <a href="https://tailwindcss.com/">Tailwind CSS</a>
           </dt>
           <dd>
-            {t("tailwindcssDesc")}
+            {t("index.tailwindcssDesc")}
             <ul className="ms-2 sm:ms-4 indent-xs sm:indent-sm">
               <li>
                 <a href="https://v1.tailwindcss.com/docs/typography-plugin">
@@ -105,7 +105,7 @@ const Homepage: NextPage = () => {
                   {" ("}
                   <Trans
                     t={gt}
-                    i18nKey="by_someone"
+                    i18nKey="index.by_someone"
                     values={{ name: "20lives" }}
                   >
                     by <a href="https://github.com/20lives">20lives</a>
@@ -114,7 +114,7 @@ const Homepage: NextPage = () => {
                 </i>
               </li>
               <li>
-                {t("themeColors")}
+                {t("index.themeColors")}
                 <code className="block text-sm ms-6">
                   {`primary, secondary, accent, background`}
                 </code>
@@ -127,7 +127,7 @@ const Homepage: NextPage = () => {
             </a>
           </dt>
           <dd>
-            <Trans t={t} i18nKey="i18nextDesc">
+            <Trans t={t} i18nKey="index.i18nextDesc">
               {"Internationalization framework for Next.js which uses "}
               <a href="https://react.i18next.com/">react-i18next</a> under the
               hood.
@@ -139,37 +139,37 @@ const Homepage: NextPage = () => {
               React Testing Library
             </a>
           </dt>
-          <dd>{t("testingDesc")}</dd>
+          <dd>{t("index.testingDesc")}</dd>
           <hr className="my-1" />
           <dt>
             <a href="https://bradfrost.com/blog/post/atomic-web-design/">
               atomic design
             </a>
           </dt>
-          <dd>{t("atomicDesignDesc")}</dd>
+          <dd>{t("index.atomicDesignDesc")}</dd>
           <hr className="my-1" />
-          <dt>{t("errorPageTerm")}</dt>
+          <dt>{t("index.errorPageTerm")}</dt>
           <dd>
             <Trans
               t={t}
-              i18nKey="errorPageDesc"
+              i18nKey="index.errorPageDesc"
               components={{
                 1: <LinkText href="/404" />,
                 3: <LinkText href="/500" />,
               }}
             />
           </dd>
-          <dt>{t("heightBreakpointsTerm")}</dt>
+          <dt>{t("index.heightBreakpointsTerm")}</dt>
           <dd>
             <code>xsh, smh, mdh, lgh, xlh</code>.
           </dd>
-          <dt>{t("importPathTerm")}</dt>
+          <dt>{t("index.importPathTerm")}</dt>
           <dd>
             <code>@/components</code>, <code>@/lib</code>, <code>@/styles</code>
             ...
           </dd>
           <hr className="my-1" />
-          <dt>{t("recommendedVSCodeTerm")}</dt>
+          <dt>{t("index.recommendedVSCodeTerm")}</dt>
           <dd>
             <a href="https://marketplace.visualstudio.com/items?itemName=heybourn.headwind">
               Headwind
@@ -185,12 +185,12 @@ const Homepage: NextPage = () => {
             .
           </dd>
           <dt>
-            <Link href="/cna">{t("cnaSamplesTerm")}</Link>
+            <Link href="/cna">{t("index.cnaSamplesTerm")}</Link>
           </dt>
           <dd>
             <Trans
               t={t}
-              i18nKey="cnaSamplesDesc"
+              i18nKey="index.cnaSamplesDesc"
               components={{
                 1: (
                   <a href="https://nextjs.org/docs/api-reference/create-next-app" />
@@ -198,18 +198,18 @@ const Homepage: NextPage = () => {
               }}
             />
           </dd>
-          <dt className="capitalize">{gt("other")}</dt>
+          <dt className="capitalize">{gt(")}</dt>
           <dd>
             <Trans
               t={t}
-              i18nKey="otherCheckSnippetsDesc"
+              i18nKey="index.otherCheckSnippetsDesc"
               components={{ 1: <code /> }}
             />
           </dd>
-          <dd>{t("otherCareMotionDesc")}</dd>
-          <dd>{t("otherTryToUseDesc")}</dd>
+          <dd>{t("index.otherCareMotionDesc")}</dd>
+          <dd>{t("index.otherTryToUseDesc")}</dd>
           <dd>
-            <Trans t={t} i18nKey="otherUseEmmetDesc">
+            <Trans t={t} i18nKey="index.otherUseEmmetDesc">
               {"Use "}
               <a href="https://code.visualstudio.com/docs/editor/emmet">
                 Emmet

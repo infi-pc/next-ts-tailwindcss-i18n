@@ -23,19 +23,19 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 const CreateNextApp: NextPage = () => {
   const router = useRouter();
-  const { t } = useTranslation([PAGES_TNS], { keyPrefix: "cna.index" });
+  const { t } = useTranslation([PAGES_TNS], {});
 
   return (
     <>
       <Head>
-        <title>{t("documentTitle")}</title>
-        <meta name="description" content={t("documentDesc")} />
+        <title>{t("cna.index.documentTitle")}</title>
+        <meta name="description" content={t("cna.index.documentDesc")} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <main className="container flex flex-col justify-center min-h-screen m-auto text-center">
         <h1 className="text-5xl font-semibold">
-          <Trans t={t} i18nKey="pageTitle">
+          <Trans t={t} i18nKey="cna.index.pageTitle">
             <a
               title="CNA"
               href="https://nextjs.org/docs/api-reference/create-next-app"
@@ -46,14 +46,14 @@ const CreateNextApp: NextPage = () => {
             {" Welcome Pages"}
           </Trans>
         </h1>
-        <p className="mt-2 mb-3 text-xl">{t("pageSubtitle")}</p>
+        <p className="mt-2 mb-3 text-xl">{t("cna.index.pageSubtitle")}</p>
         <div className="grid max-w-4xl grid-cols-1 gap-8 px-2 mx-auto my-4 text-left lg:grid-cols-2">
           <LinkBox
             href={`${router.route}/default`}
             className="p-4 duration-150 border rounded-lg shadow-sm border-primary-600 border-opacity-20 hover:text-primary-600 dark:hover:text-primary-400 hover:border-opacity-80 hover:shadow-xl"
           >
             <h2 className="mb-2 text-2xl">Default CNA &rarr;</h2>
-            <p className="text-lg">{t("defaultDesc")}</p>
+            <p className="text-lg">{t("cna.index.defaultDesc")}</p>
           </LinkBox>
           <LinkBox
             href={`${router.route}/custom`}
@@ -61,7 +61,7 @@ const CreateNextApp: NextPage = () => {
           >
             <h2 className="mb-2 text-2xl">Custom CNA &rarr;</h2>
             <p className="text-lg">
-              <Trans t={t} i18nKey="customDesc">
+              <Trans t={t} i18nKey="cna.index.customDesc">
                 {"CNA page that I wrote with "}
                 <span
                   title="https://tailwindcss.com/"
