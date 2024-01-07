@@ -105,7 +105,7 @@ const Homepage: NextPage = () => {
                   {" ("}
                   <Trans
                     t={gt}
-                    i18nKey="index.by_someone"
+                    i18nKey="by_someone"
                     values={{ name: "20lives" }}
                   >
                     by <a href="https://github.com/20lives">20lives</a>
@@ -198,7 +198,7 @@ const Homepage: NextPage = () => {
               }}
             />
           </dd>
-          <dt className="capitalize">{gt(")}</dt>
+          <dt className="capitalize">{gt("other")}</dt>
           <dd>
             <Trans
               t={t}
